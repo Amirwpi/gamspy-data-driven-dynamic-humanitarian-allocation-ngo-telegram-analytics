@@ -1,0 +1,121 @@
+costs:
+  shipment:
+    value: 0.2
+  procurement:
+    food_clothing: 40
+    nonfood_items_clothing: 20
+    housing: 100
+  holding:
+    value: 0.05
+  wage:
+    medical: 1200
+    info_legal: 1000
+  relocation:
+    value: 200
+
+capacity:
+  staff_service_capacity:
+    medical: 200
+    info_legal: 200
+  total_staff_available:
+    medical: 250
+    info_legal: 100
+
+budget:
+  per_period: 30_000_000
+
+penalties:
+  backlog_p1:
+    L:
+      1: 100
+      2: 300
+      3: 1000
+    M:
+      1: 300
+      2: 800
+      3: 2500
+    H:
+      1: 1000
+      2: 3000
+      3: 10000
+  backlog_p2:
+    L:
+      1: 50
+      2: 100
+      3: 300
+    M:
+      1: 150
+      2: 400
+      3: 1000
+    H:
+      1: 500
+      2: 1200
+      3: 3000
+  backlog_p3:
+    L:
+      1: 200
+      2: 500
+      3: 1500
+    M:
+      1: 500
+      2: 1200
+      3: 4000
+    H:
+      1: 1500
+      2: 4000
+      3: 12000
+  backlog_s1:
+    L:
+      1: 500
+      2: 1500
+      3: 5000
+    M:
+      1: 2000
+      2: 5000
+      3: 15000
+    H:
+      1: 10000
+      2: 25000
+      3: 50000
+  backlog_s2:
+    L:
+      1: 100
+      2: 300
+      3: 800
+    M:
+      1: 300
+      2: 800
+      3: 2000
+    H:
+      1: 1000
+      2: 3000
+      3: 8000
+
+policy:
+  procurement_origin: "Ukraine"
+  fairness_weight: 0.1
+  fairness_eps: 1.0e-6
+  big_M: 10000000000
+
+data_files:
+  input_directory: "Input_Data"
+  demand: "demand(i,k,r,t).csv"
+  shipment_feasibility: "Aij.csv"
+  distance_matrix: "dist_ij.csv"
+  locations: "countries.csv"
+
+location_mapping:
+  Hungary: Hungry
+  UnitedStates: UnitedState
+
+model:
+  solver: "CPLEX"
+  time_limit: 300
+  gap_tolerance: 0.05
+  verbose: true
+
+output:
+  output_directory: "Output"
+  save_csv: true
+  save_excel: true
+  generate_plots: true

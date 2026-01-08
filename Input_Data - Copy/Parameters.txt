@@ -1,0 +1,18 @@
+CS(i,j)=uniform(1,2)
+CP(i,p)==> only in ukraine (origin) 600$ for food, 100$ clothes, 30$ other 
+CH(i,j)=uniform(0.1,0.2)
+CW(s)==>health services (s=1)=1500 ; legal services(s=2)=1200
+CM(i,j,s) === >> travel cost health = 300$ For all transportation
+alpha(s)=> service capacity per staff ==> health (s=1)=100 ; legal (s=2)
+G(s,t)=total service capacity= total available health staff G(1,t)=300; for legal G(2,t)=250
+Betta(t)=Budget limitation for period t= 1 milion $
+Gamma(r,a)=Deprivation cost function, if backlog is one age period penalty for r=H==> 5000, r=M==>2500, r=L ==> 200
+if delay is two age period r=H==> 10000, r=M==>3500, r=L ==> 400
+if delay is three age periods r=H==> 20000, r=M==>4000, r=L ==> 600
+
+after three there is no demand
+
+ηi= Procurement permission at location only at origin is allowed (binary)
+
+M=10000000000
+
