@@ -1,0 +1,77 @@
+2026-01-29 17:55:25,181 - HumanitarianLogistics - INFO - Logging initialized. Log file: Z:\Paper 5-Graph\Gams Model v013 - - Copy\output\logs\optimization_20260129_175525.log
+2026-01-29 17:55:25,183 - HumanitarianLogistics - INFO - Starting optimization system
+2026-01-29 17:55:25,183 - HumanitarianLogistics - INFO - Loading configuration...
+2026-01-29 17:55:25,199 - HumanitarianLogistics - INFO -   Configuration loaded from model_config.yaml
+2026-01-29 17:55:25,200 - HumanitarianLogistics - INFO - 
+================================================================================
+2026-01-29 17:55:25,202 - HumanitarianLogistics - INFO - PHASE 1: DATA LOADING
+2026-01-29 17:55:25,202 - HumanitarianLogistics - INFO - ================================================================================
+2026-01-29 17:55:25,203 - DataManager - INFO - Loading all input data...
+2026-01-29 17:55:25,204 - DataManager - INFO -   Loading demand from demand(i,k,r,t).csv...
+2026-01-29 17:55:25,212 - DataManager - INFO -   Sets: 13 locations, 32 periods, 3 products, 2 services
+2026-01-29 17:55:25,213 - HumanitarianLogistics - INFO - 
+================================================================================
+2026-01-29 17:55:25,214 - HumanitarianLogistics - INFO - PHASE 2: MODEL BUILDING
+2026-01-29 17:55:25,214 - HumanitarianLogistics - INFO - ================================================================================
+2026-01-29 17:55:25,365 - HumanitarianLogisticsModel - INFO - ================================================================================
+2026-01-29 17:55:25,367 - HumanitarianLogisticsModel - INFO - BUILDING HUMANITARIAN LOGISTICS OPTIMIZATION MODEL
+2026-01-29 17:55:25,368 - HumanitarianLogisticsModel - INFO - ================================================================================
+2026-01-29 17:55:25,369 - SetBuilder - INFO - Building sets...
+2026-01-29 17:55:25,535 - SetBuilder - INFO -   Created 9 sets
+2026-01-29 17:55:25,536 - HumanitarianLogisticsModel - INFO - 
+Building parameters...
+2026-01-29 17:55:25,550 - DataManager - INFO -   Loaded network data: 156 arcs, 156 distances
+2026-01-29 17:55:25,604 - ParameterManager - INFO -   Creating demand parameter...
+2026-01-29 17:55:25,690 - ParameterManager - INFO -     5334 demand records created
+2026-01-29 17:55:25,691 - ParameterManager - INFO -   Creating cost parameters...
+2026-01-29 17:55:25,931 - ParameterManager - INFO -     Loaded 45 penalty values
+2026-01-29 17:55:25,968 - DataManager - INFO -   Loaded initial inventory: 39 records
+2026-01-29 17:55:25,976 - DataManager - INFO -   Loaded procurement allowance: 13 records
+2026-01-29 17:55:26,109 - ParameterManager - INFO -     Loaded 39 initial inventory records
+2026-01-29 17:55:26,141 - HumanitarianLogisticsModel - INFO -   Created 18 parameter groups
+2026-01-29 17:55:26,142 - VariableBuilder - INFO - Building variables...
+2026-01-29 17:55:26,500 - VariableBuilder - INFO -   Created 15 variables
+2026-01-29 17:55:26,501 - HumanitarianLogisticsModel - INFO - 
+Building objectives...
+2026-01-29 17:55:26,502 - ObjectiveBuilder - INFO -   Building fairness objective...
+2026-01-29 17:55:26,526 - ObjectiveBuilder - INFO -   Building cost objective...
+2026-01-29 17:55:26,550 - ConstraintBuilder - INFO - Building constraints...
+2026-01-29 17:55:26,579 - ConstraintBuilder - INFO -   Building initial conditions...
+2026-01-29 17:55:26,885 - ConstraintBuilder - INFO -   Building flow balance constraints...
+2026-01-29 17:55:26,970 - ConstraintBuilder - INFO -   Building capacity constraints...
+2026-01-29 17:55:27,072 - ConstraintBuilder - INFO -   Building backlog constraints...
+2026-01-29 17:55:27,438 - ConstraintBuilder - INFO -   Building fairness constraints with linearization...
+2026-01-29 17:55:27,805 - ConstraintBuilder - INFO -   Building policy constraints...
+2026-01-29 17:55:27,856 - ConstraintBuilder - INFO -   Created 46 equation groups
+2026-01-29 17:55:27,857 - HumanitarianLogisticsModel - INFO - 
+================================================================================
+2026-01-29 17:55:27,858 - HumanitarianLogisticsModel - INFO - MODEL BUILD COMPLETE
+2026-01-29 17:55:27,859 - HumanitarianLogisticsModel - INFO - ================================================================================
+2026-01-29 17:55:27,859 - HumanitarianLogistics - INFO - 
+================================================================================
+2026-01-29 17:55:27,860 - HumanitarianLogistics - INFO - PHASE 3: OPTIMIZATION
+2026-01-29 17:55:27,861 - HumanitarianLogistics - INFO - ================================================================================
+2026-01-29 17:55:27,869 - TwoStageSolver - INFO - ================================================================================
+2026-01-29 17:55:27,870 - TwoStageSolver - INFO - STAGE 1: FAIRNESS MAXIMIZATION
+2026-01-29 17:55:27,871 - TwoStageSolver - INFO - ================================================================================
+2026-01-29 17:55:27,872 - TwoStageSolver - INFO -   Solver: CPLEX
+2026-01-29 17:55:27,873 - TwoStageSolver - INFO -   Problem: MIP
+2026-01-29 17:55:27,873 - TwoStageSolver - INFO -   Objective: Maximize Sum(theta[t])
+2026-01-29 17:55:27,874 - TwoStageSolver - INFO -   Gap Tolerance: 0.3%
+2026-01-29 17:55:27,876 - TwoStageSolver - INFO -   Time Limit: 300s
+2026-01-29 17:56:26,159 - TwoStageSolver - INFO - 
+================================================================================
+2026-01-29 17:56:26,161 - TwoStageSolver - INFO - STAGE 1 COMPLETE
+2026-01-29 17:56:26,162 - TwoStageSolver - INFO -   ThetaStar: 26.749789
+2026-01-29 17:56:26,163 - TwoStageSolver - INFO -   Status: ModelStatus.Integer
+2026-01-29 17:56:26,164 - TwoStageSolver - INFO - ================================================================================
+2026-01-29 17:56:26,242 - TwoStageSolver - INFO - 
+================================================================================
+2026-01-29 17:56:26,243 - TwoStageSolver - INFO - STAGE 2: COST MINIMIZATION
+2026-01-29 17:56:26,244 - TwoStageSolver - INFO - ================================================================================
+2026-01-29 17:56:26,245 - TwoStageSolver - INFO -   Solver: CPLEX
+2026-01-29 17:56:26,246 - TwoStageSolver - INFO -   Problem: MIP
+2026-01-29 17:56:26,246 - TwoStageSolver - INFO -   Objective: Minimize Total Cost
+2026-01-29 17:56:26,247 - TwoStageSolver - INFO -   Fairness preserved: >= 26.749789
+2026-01-29 17:56:26,247 - TwoStageSolver - INFO -   Gap Tolerance: 0.3%
+2026-01-29 17:56:26,248 - TwoStageSolver - INFO -   Time Limit: 300s

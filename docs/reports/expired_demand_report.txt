@@ -1,0 +1,41 @@
+================================================================================
+EXPIRED DEMAND DETAILED REPORT
+================================================================================
+
+Total Demand Lost (Expired After Age 3): 223,096 units
+
+Expired Demand by Time Period:
+----------------------------------------
+  Period   4:    110,280 units
+  Period   5:     49,429 units
+  Period   6:     16,267 units
+  Period   7:      7,728 units
+  Period   8:      6,604 units
+  Period   9:      5,539 units
+  Period  10:      5,634 units
+  Period  11:      4,787 units
+  Period  12:      3,309 units
+  Period  13:      2,052 units
+  Period  14:      1,689 units
+  Period  15:      1,115 units
+  Period  16:      1,071 units
+  Period  17:        702 units
+  Period  18:        900 units
+  Period  19:        781 units
+  Period  20:        546 units
+  Period  21:        536 units
+  Period  22:        607 units
+  Period  23:        650 units
+  Period  24:        362 units
+  Period  25:        257 units
+  Period  26:        242 units
+  Period  27:        176 units
+  Period  28:        434 units
+  Period  29:        449 units
+  Period  30:        527 units
+  Period  31:        423 units
+----------------------------------------
+  Average (non-zero):      7,968 units
+  Maximum:    110,280 units (Period 4)
+
+================================================================================

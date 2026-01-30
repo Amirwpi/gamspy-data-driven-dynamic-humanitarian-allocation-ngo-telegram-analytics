@@ -1,0 +1,59 @@
+2026-01-29 18:31:12,113 - HumanitarianLogistics - INFO - Logging initialized. Log file: Z:\Paper 5-Graph\Gams Model v013 - - Copy\output\logs\optimization_20260129_183112.log
+2026-01-29 18:31:12,114 - HumanitarianLogistics - INFO - Starting optimization system
+2026-01-29 18:31:12,114 - HumanitarianLogistics - INFO - Loading configuration...
+2026-01-29 18:31:12,129 - HumanitarianLogistics - INFO -   Configuration loaded from model_config.yaml
+2026-01-29 18:31:12,130 - HumanitarianLogistics - INFO - 
+================================================================================
+2026-01-29 18:31:12,130 - HumanitarianLogistics - INFO - PHASE 1: DATA LOADING
+2026-01-29 18:31:12,131 - HumanitarianLogistics - INFO - ================================================================================
+2026-01-29 18:31:12,131 - DataManager - INFO - Loading all input data...
+2026-01-29 18:31:12,132 - DataManager - INFO -   Loading demand from demand(i,k,r,t).csv...
+2026-01-29 18:31:12,138 - DataManager - INFO -   Sets: 13 locations, 32 periods, 3 products, 2 services
+2026-01-29 18:31:12,139 - HumanitarianLogistics - INFO - 
+================================================================================
+2026-01-29 18:31:12,140 - HumanitarianLogistics - INFO - PHASE 2: MODEL BUILDING
+2026-01-29 18:31:12,140 - HumanitarianLogistics - INFO - ================================================================================
+2026-01-29 18:31:12,280 - HumanitarianLogisticsModel - INFO - ================================================================================
+2026-01-29 18:31:12,282 - HumanitarianLogisticsModel - INFO - BUILDING HUMANITARIAN LOGISTICS OPTIMIZATION MODEL
+2026-01-29 18:31:12,282 - HumanitarianLogisticsModel - INFO - ================================================================================
+2026-01-29 18:31:12,283 - SetBuilder - INFO - Building sets...
+2026-01-29 18:31:12,400 - SetBuilder - INFO -   Created 9 sets
+2026-01-29 18:31:12,401 - HumanitarianLogisticsModel - INFO - 
+Building parameters...
+2026-01-29 18:31:12,410 - DataManager - INFO -   Loaded network data: 156 arcs, 156 distances
+2026-01-29 18:31:12,447 - ParameterManager - INFO -   Creating demand parameter...
+2026-01-29 18:31:12,515 - ParameterManager - INFO -     5334 demand records created
+2026-01-29 18:31:12,516 - ParameterManager - INFO -   Creating cost parameters...
+2026-01-29 18:31:12,686 - ParameterManager - INFO -     Loaded 45 penalty values
+2026-01-29 18:31:12,709 - DataManager - INFO -   Loaded initial inventory: 39 records
+2026-01-29 18:31:12,713 - DataManager - INFO -   Loaded procurement allowance: 13 records
+2026-01-29 18:31:12,806 - ParameterManager - INFO -     Loaded 39 initial inventory records
+2026-01-29 18:31:12,827 - HumanitarianLogisticsModel - INFO -   Created 18 parameter groups
+2026-01-29 18:31:12,827 - VariableBuilder - INFO - Building variables...
+2026-01-29 18:31:13,053 - VariableBuilder - INFO -   Created 15 variables
+2026-01-29 18:31:13,054 - HumanitarianLogisticsModel - INFO - 
+Building objectives...
+2026-01-29 18:31:13,055 - ObjectiveBuilder - INFO -   Building fairness objective...
+2026-01-29 18:31:13,070 - ObjectiveBuilder - INFO -   Building cost objective...
+2026-01-29 18:31:13,088 - ConstraintBuilder - INFO - Building constraints...
+2026-01-29 18:31:13,103 - ConstraintBuilder - INFO -   Building initial conditions...
+2026-01-29 18:31:13,284 - ConstraintBuilder - INFO -   Building flow balance constraints...
+2026-01-29 18:31:13,335 - ConstraintBuilder - INFO -   Building capacity constraints...
+2026-01-29 18:31:13,401 - ConstraintBuilder - INFO -   Building backlog constraints...
+2026-01-29 18:31:13,662 - ConstraintBuilder - INFO -   Building fairness constraints with linearization...
+2026-01-29 18:31:13,909 - ConstraintBuilder - INFO -   Building policy constraints...
+2026-01-29 18:31:13,945 - ConstraintBuilder - INFO -   Created 46 equation groups
+2026-01-29 18:31:13,945 - HumanitarianLogisticsModel - INFO - 
+================================================================================
+2026-01-29 18:31:13,946 - HumanitarianLogisticsModel - INFO - MODEL BUILD COMPLETE
+2026-01-29 18:31:13,946 - HumanitarianLogisticsModel - INFO - ================================================================================
+2026-01-29 18:31:13,947 - HumanitarianLogistics - INFO - 
+================================================================================
+2026-01-29 18:31:13,947 - HumanitarianLogistics - INFO - PHASE 3: OPTIMIZATION
+2026-01-29 18:31:13,948 - HumanitarianLogistics - INFO - ================================================================================
+2026-01-29 18:31:13,954 - TwoStageSolver - INFO - ================================================================================
+2026-01-29 18:31:13,955 - TwoStageSolver - INFO - STAGE 1: FAIRNESS MAXIMIZATION
+2026-01-29 18:31:13,956 - TwoStageSolver - INFO - ================================================================================
+2026-01-29 18:31:13,957 - TwoStageSolver - INFO -   Solver: CPLEX
+2026-01-29 18:31:13,957 - TwoStageSolver - INFO -   Problem: MIP
+2026-01-29 18:31:13,958 - TwoStageSolver - INFO -   Objective: Maximize Sum(theta[t])

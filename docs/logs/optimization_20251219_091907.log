@@ -1,0 +1,154 @@
+2025-12-19 09:19:07,533 - HumanitarianLogistics - INFO - Logging initialized. Log file: Z:\Paper5-Graph\Gams Model v012 - Object orenting model\output\logs\optimization_20251219_091907.log
+2025-12-19 09:19:07,533 - HumanitarianLogistics - INFO - Starting optimization system
+2025-12-19 09:19:07,533 - HumanitarianLogistics - INFO - Loading configuration...
+2025-12-19 09:19:07,547 - HumanitarianLogistics - INFO -   Configuration loaded from model_config.yaml
+2025-12-19 09:19:07,549 - HumanitarianLogistics - INFO - 
+================================================================================
+2025-12-19 09:19:07,549 - HumanitarianLogistics - INFO - PHASE 1: DATA LOADING
+2025-12-19 09:19:07,549 - HumanitarianLogistics - INFO - ================================================================================
+2025-12-19 09:19:07,549 - DataManager - INFO - Loading all input data...
+2025-12-19 09:19:07,550 - DataManager - INFO -   Loading demand from demand(i,k,r,t).csv...
+2025-12-19 09:19:07,557 - DataManager - INFO -   Sets: 13 locations, 32 periods, 3 products, 2 services
+2025-12-19 09:19:07,558 - HumanitarianLogistics - INFO - 
+================================================================================
+2025-12-19 09:19:07,558 - HumanitarianLogistics - INFO - PHASE 2: MODEL BUILDING
+2025-12-19 09:19:07,559 - HumanitarianLogistics - INFO - ================================================================================
+2025-12-19 09:19:07,664 - HumanitarianLogisticsModel - INFO - ================================================================================
+2025-12-19 09:19:07,665 - HumanitarianLogisticsModel - INFO - BUILDING HUMANITARIAN LOGISTICS OPTIMIZATION MODEL
+2025-12-19 09:19:07,665 - HumanitarianLogisticsModel - INFO - ================================================================================
+2025-12-19 09:19:07,666 - SetBuilder - INFO - Building sets...
+2025-12-19 09:19:07,766 - SetBuilder - INFO -   Created 9 sets
+2025-12-19 09:19:07,767 - HumanitarianLogisticsModel - INFO - 
+Building parameters...
+2025-12-19 09:19:07,775 - DataManager - INFO -   Loaded network data: 156 arcs, 156 distances
+2025-12-19 09:19:07,806 - ParameterManager - INFO -   Creating demand parameter...
+2025-12-19 09:19:07,870 - ParameterManager - INFO -     5334 demand records created
+2025-12-19 09:19:07,871 - ParameterManager - INFO -   Creating cost parameters...
+2025-12-19 09:19:08,007 - ParameterManager - INFO -     Loaded 45 penalty values
+2025-12-19 09:19:08,028 - DataManager - INFO -   Loaded initial inventory: 39 records
+2025-12-19 09:19:08,031 - DataManager - INFO -   Loaded procurement allowance: 13 records
+2025-12-19 09:19:08,107 - ParameterManager - INFO -     Loaded 39 initial inventory records
+2025-12-19 09:19:08,124 - HumanitarianLogisticsModel - INFO -   Created 18 parameter groups
+2025-12-19 09:19:08,124 - VariableBuilder - INFO - Building variables...
+2025-12-19 09:19:08,299 - VariableBuilder - INFO -   Created 13 variables
+2025-12-19 09:19:08,300 - HumanitarianLogisticsModel - INFO - 
+Building objectives...
+2025-12-19 09:19:08,300 - ObjectiveBuilder - INFO -   Building fairness objective...
+2025-12-19 09:19:08,313 - ObjectiveBuilder - INFO -   Building cost objective...
+2025-12-19 09:19:08,328 - ConstraintBuilder - INFO - Building constraints...
+2025-12-19 09:19:08,342 - ConstraintBuilder - INFO -   Building initial conditions...
+2025-12-19 09:19:08,489 - ConstraintBuilder - INFO -   Building flow balance constraints...
+2025-12-19 09:19:08,532 - ConstraintBuilder - INFO -   Building capacity constraints...
+2025-12-19 09:19:08,587 - ConstraintBuilder - INFO -   Building backlog constraints...
+2025-12-19 09:19:08,786 - ConstraintBuilder - INFO -   Building fairness constraints...
+2025-12-19 09:19:08,814 - ConstraintBuilder - INFO -   Building policy constraints...
+2025-12-19 09:19:08,842 - ConstraintBuilder - INFO -   Created 34 equation groups
+2025-12-19 09:19:08,842 - HumanitarianLogisticsModel - INFO - 
+================================================================================
+2025-12-19 09:19:08,842 - HumanitarianLogisticsModel - INFO - MODEL BUILD COMPLETE
+2025-12-19 09:19:08,844 - HumanitarianLogisticsModel - INFO - ================================================================================
+2025-12-19 09:19:08,844 - HumanitarianLogistics - INFO - 
+================================================================================
+2025-12-19 09:19:08,845 - HumanitarianLogistics - INFO - PHASE 3: OPTIMIZATION
+2025-12-19 09:19:08,845 - HumanitarianLogistics - INFO - ================================================================================
+2025-12-19 09:19:08,851 - TwoStageSolver - INFO - ================================================================================
+2025-12-19 09:19:08,852 - TwoStageSolver - INFO - STAGE 1: FAIRNESS MAXIMIZATION
+2025-12-19 09:19:08,852 - TwoStageSolver - INFO - ================================================================================
+2025-12-19 09:19:08,853 - TwoStageSolver - INFO -   Solver: CPLEX
+2025-12-19 09:19:08,853 - TwoStageSolver - INFO -   Problem: MIP
+2025-12-19 09:19:08,854 - TwoStageSolver - INFO -   Objective: Maximize Sum(theta[t])
+2025-12-19 09:19:11,818 - TwoStageSolver - INFO - 
+================================================================================
+2025-12-19 09:19:11,821 - TwoStageSolver - INFO - STAGE 1 COMPLETE
+2025-12-19 09:19:11,821 - TwoStageSolver - INFO -   ThetaStar: 29.005725
+2025-12-19 09:19:11,822 - TwoStageSolver - INFO -   Status: ModelStatus.Integer
+2025-12-19 09:19:11,823 - TwoStageSolver - INFO - ================================================================================
+2025-12-19 09:19:11,854 - TwoStageSolver - INFO - 
+================================================================================
+2025-12-19 09:19:11,854 - TwoStageSolver - INFO - STAGE 2: COST MINIMIZATION
+2025-12-19 09:19:11,855 - TwoStageSolver - INFO - ================================================================================
+2025-12-19 09:19:11,855 - TwoStageSolver - INFO -   Solver: CPLEX
+2025-12-19 09:19:11,856 - TwoStageSolver - INFO -   Problem: MIP
+2025-12-19 09:19:11,856 - TwoStageSolver - INFO -   Objective: Minimize Total Cost
+2025-12-19 09:19:11,856 - TwoStageSolver - INFO -   Fairness preserved: >= 29.005725
+2025-12-19 09:19:20,021 - TwoStageSolver - INFO - 
+================================================================================
+2025-12-19 09:19:20,023 - TwoStageSolver - INFO - STAGE 2 COMPLETE
+2025-12-19 09:19:20,023 - TwoStageSolver - INFO -   Total Cost: $1,013,011,284.80
+2025-12-19 09:19:20,024 - TwoStageSolver - INFO -   Status: ModelStatus.Integer
+2025-12-19 09:19:20,025 - TwoStageSolver - INFO - ================================================================================
+2025-12-19 09:19:20,025 - HumanitarianLogistics - INFO - 
+================================================================================
+2025-12-19 09:19:20,026 - HumanitarianLogistics - INFO - PHASE 4: SOLUTION EXTRACTION
+2025-12-19 09:19:20,026 - HumanitarianLogistics - INFO - ================================================================================
+2025-12-19 09:19:20,027 - TwoStageSolver - INFO - 
+================================================================================
+2025-12-19 09:19:20,027 - TwoStageSolver - INFO - EXTRACTING SOLUTION DATA
+2025-12-19 09:19:20,028 - TwoStageSolver - INFO - ================================================================================
+2025-12-19 09:19:20,028 - TwoStageSolver - INFO - 
+Loading variable records...
+2025-12-19 09:19:20,029 - SolutionExtractor - INFO - Extracting solution data...
+2025-12-19 09:19:20,030 - SolutionExtractor - INFO -   + x: 16224 records
+2025-12-19 09:19:20,030 - SolutionExtractor - INFO -   + y: 1248 records
+2025-12-19 09:19:20,031 - SolutionExtractor - INFO -   + Inv: 1248 records
+2025-12-19 09:19:20,032 - SolutionExtractor - INFO -   + reloc: 10010 records
+2025-12-19 09:19:20,032 - SolutionExtractor - INFO -   + staff: 832 records
+2025-12-19 09:19:20,033 - SolutionExtractor - INFO -   + product_fulfilled: 11232 records
+2025-12-19 09:19:20,033 - SolutionExtractor - INFO -   + service_delivered: 7488 records
+2025-12-19 09:19:20,034 - SolutionExtractor - INFO -   + backlog_prod: 11232 records
+2025-12-19 09:19:20,034 - SolutionExtractor - INFO -   + backlog_serv: 7488 records
+2025-12-19 09:19:20,034 - SolutionExtractor - INFO -   + Exp: 6240 records
+2025-12-19 09:19:20,035 - SolutionExtractor - INFO -   + theta: 32 records
+2025-12-19 09:19:20,035 - SolutionExtractor - INFO - Computing objective breakdown...
+2025-12-19 09:19:20,084 - HumanitarianLogistics - INFO - 
+================================================================================
+2025-12-19 09:19:20,085 - HumanitarianLogistics - INFO - PHASE 5: OUTPUT GENERATION
+2025-12-19 09:19:20,085 - HumanitarianLogistics - INFO - ================================================================================
+2025-12-19 09:19:20,105 - OutputManager - INFO - ================================================================================
+2025-12-19 09:19:20,106 - OutputManager - INFO - GENERATING OUTPUTS
+2025-12-19 09:19:20,106 - OutputManager - INFO - ================================================================================
+2025-12-19 09:19:20,107 - CSVWriter - INFO - Saving CSV files...
+2025-12-19 09:19:20,220 - CSVWriter - INFO -   + x_Shipment.csv (16224 records)
+2025-12-19 09:19:20,235 - CSVWriter - INFO -   + y_Procurement.csv (1248 records)
+2025-12-19 09:19:20,249 - CSVWriter - INFO -   + Inv_Inventory.csv (1248 records)
+2025-12-19 09:19:20,316 - CSVWriter - INFO -   + reloc_StaffRelocation.csv (10010 records)
+2025-12-19 09:19:20,328 - CSVWriter - INFO -   + staff_Deployment.csv (832 records)
+2025-12-19 09:19:20,396 - CSVWriter - INFO -   + product_fulfilled.csv (11232 records)
+2025-12-19 09:19:20,442 - CSVWriter - INFO -   + service_delivered.csv (7488 records)
+2025-12-19 09:19:20,523 - CSVWriter - INFO -   + backlog_prod.csv (11232 records)
+2025-12-19 09:19:20,570 - CSVWriter - INFO -   + backlog_serv.csv (7488 records)
+2025-12-19 09:19:20,609 - CSVWriter - INFO -   + Exp_ExpiredDemand.csv (6240 records)
+2025-12-19 09:19:20,618 - CSVWriter - INFO -   + theta_Fairness.csv (32 records)
+2025-12-19 09:19:20,618 - CSVWriter - INFO -   Saved 11 CSV files to Z:\Paper5-Graph\Gams Model v012 - Object orenting model\output\csvs
+2025-12-19 09:19:20,619 - ExcelWriter - INFO - Saving Excel report to optimization_results.xlsx...
+2025-12-19 09:19:32,436 - ExcelWriter - INFO -   Excel report saved successfully
+2025-12-19 09:19:32,436 - OutputManager - INFO - 
+Generating text reports...
+2025-12-19 09:19:32,447 - OutputManager - INFO -   + summary_report.txt
+2025-12-19 09:19:32,457 - OutputManager - INFO -   + expired_demand_report.txt
+2025-12-19 09:19:32,458 - OutputManager - INFO - 
+Generating visualization data...
+2025-12-19 09:19:32,463 - VisualizationPrep - INFO - Preparing visualization data...
+2025-12-19 09:19:32,484 - VisualizationPrep - INFO -     Loaded x_Shipment.csv
+2025-12-19 09:19:32,490 - VisualizationPrep - INFO -     Loaded Inv_Inventory.csv
+2025-12-19 09:19:32,495 - VisualizationPrep - INFO -     Loaded staff_Deployment.csv
+2025-12-19 09:19:32,511 - VisualizationPrep - INFO -     Loaded product_fulfilled.csv
+2025-12-19 09:19:32,525 - VisualizationPrep - INFO -     Loaded service_delivered.csv
+2025-12-19 09:19:32,542 - VisualizationPrep - INFO -     Loaded backlog_prod.csv
+2025-12-19 09:19:32,557 - VisualizationPrep - INFO -     Loaded backlog_serv.csv
+2025-12-19 09:19:32,563 - VisualizationPrep - INFO -     Loaded y_Procurement.csv
+2025-12-19 09:19:32,577 - VisualizationPrep - INFO -     Loaded reloc_StaffRelocation.csv
+2025-12-19 09:19:34,359 - OutputManager - WARNING -   Visualization prep failed: keys must be str, int, float, bool or None, not int64
+2025-12-19 09:19:34,361 - OutputManager - INFO - 
+================================================================================
+2025-12-19 09:19:34,362 - OutputManager - INFO - ALL OUTPUTS SAVED SUCCESSFULLY
+2025-12-19 09:19:34,363 - OutputManager - INFO - Output directory: Z:\Paper5-Graph\Gams Model v012 - Object orenting model\output
+2025-12-19 09:19:34,363 - OutputManager - INFO - ================================================================================
+2025-12-19 09:19:34,364 - HumanitarianLogistics - INFO - 
+================================================================================
+2025-12-19 09:19:34,364 - HumanitarianLogistics - INFO - OPTIMIZATION COMPLETED SUCCESSFULLY
+2025-12-19 09:19:34,365 - HumanitarianLogistics - INFO - ================================================================================
+2025-12-19 09:19:34,365 - HumanitarianLogistics - INFO - Total Cost: $1,013,011,284.80
+2025-12-19 09:19:34,366 - HumanitarianLogistics - INFO - Fairness (ThetaStar): 29.005725
+2025-12-19 09:19:34,366 - HumanitarianLogistics - INFO - Outputs saved to: Z:\Paper5-Graph\Gams Model v012 - Object orenting model\output
+2025-12-19 09:19:34,367 - HumanitarianLogistics - INFO - ================================================================================
